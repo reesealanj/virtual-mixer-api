@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scores",
+  "info": {
+    "name": "Score",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "game": {
+      "model": "game",
+      "via": "scores"
+    },
+    "score": {
+      "type": "integer",
+      "private": false,
+      "required": true
+    },
+    "team": {
+      "model": "teams",
+      "via": "scores"
+    }
+  }
+}

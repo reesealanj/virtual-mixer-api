@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "name": "Teams",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Members": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "scores": {
+      "via": "team",
+      "collection": "score"
+    }
+  }
+}
